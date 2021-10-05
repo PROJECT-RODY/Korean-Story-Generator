@@ -1,4 +1,6 @@
 # Korean-Story-Generator
+> 사전학습된 GPT2를 동화 데이터로 파인튜닝해 동화 생성하는 모델..
+> 
 > colab test용 .ipynb 파일 2개.
 > 
 > main.py실행시 train 또는 텍스트 생성
