@@ -144,8 +144,8 @@ cython_debug/
 
 # End of https://www.toptal.com/developers/gitignore/api/python
 
-.taz
-.txt
+*.taz
+*.txt
 test.py
-.spiece
-.params
+*.spiece
+*.params
