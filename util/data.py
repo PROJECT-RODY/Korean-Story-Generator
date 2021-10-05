@@ -41,14 +41,12 @@ def toString(list):
   return result
 
 class FairyDataset(Dataset):
-  """web novel dataset"""
 
   def __init__(self, file_path,vocab,tokenizer):
     self.file_path = file_path
     self.data =[]
     self.vocab = vocab
     self.tokenizer = tokenizer # 원래코드 
-    # self.tokenizer = vocab.tokenize # 모델과 사전 변경하면서 수정한 코드
     bos_token='<s>'
     eos_token='</s>'
     file = open(self.file_path, 'r', encoding='utf-8')
