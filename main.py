@@ -49,12 +49,12 @@ def main(cfg):
 
         ### 학습 데이터 로드
         if data_file_path == None:
-            data_file_path = '/content/drive/MyDrive/textG//data/dataset.txt'
+            data_file_path = '/content/drive/MyDrive/textG/data/dataset.txt'
         dataset = FairyDataset(data_file_path, vocab, sentencepieceTokenizer)
         fairy_data_loader = DataLoader(dataset, batch_size=batch_size)
 
         ### 파라미터 설정
-        learning_rates = [1e-4, 5e-5, 2.5e-5, 2e-5]# 학습률 잠시 수정 원래는 1e-5임
+        learning_rates = [1e-4, 5e-5, 2.5e-5, 2e-5]# 데이터 양이 너무 적어서 학습 단계별 학습률을 다르게 적용했다.
         criterion = torch.nn.CrossEntropyLoss()
         
 
