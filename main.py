@@ -29,7 +29,7 @@ def model_load(model_path, kogpt2_config):
         kogpt2model.load_state_dict(checkpoint['model_state_dict'])
         kogpt2model.eval() # 예측
 
-    vocab_b_obj = PreTrainedTokenizerFast.from_pretrained("skt/kogpt2-base-v2", bos_token='<s>', eos_token='</s>', unk_token='<unk>',  pad_token='<pad>', mask_token='<mask>')
+    vocab_b_obj = PreTrainedTokenizerFast.from_pretrained("./data/tokenizer", bos_token='<s>', eos_token='</s>', unk_token='<unk>',  pad_token='<pad>', mask_token='<mask>')
 
     return kogpt2model, vocab_b_obj
     
@@ -41,7 +41,7 @@ def main(cfg):
     save_model_path = cfg['save_model_path']
     kogpt2_config = cfg['kogpt2_config']
 
-    model, vocab_b_obj = model_load(save_model_path+"gt_checkpoint_2.tar", kogpt2_config)
+    model, vocab_b_obj = model_load(save_model_path+"pororo_2.tar", kogpt2_config)
     vocab, sentencepieceTokenizer = vocab_b_obj.get_vocab(), vocab_b_obj.tokenize
 
     if train_flg: # GTP2 파인튜닝
