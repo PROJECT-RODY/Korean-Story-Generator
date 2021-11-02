@@ -1,5 +1,7 @@
 # Korean-Story-Generator
 ---
+- 훈련된 모델은 [링크](https://drive.google.com/drive/folders/1xPkj4Xd5DrvpeoA0xjXK1k7Fm57E6zZF?usp=sharing)의 Korean-Story-Generator압축파일을 내려받아 사용할 수 있다.
+---
 > #### 사전학습된 GPT2를 동화 데이터로 파인튜닝해 동화 생성하는 모델..
 >> colab test용 .ipynb 파일 2개.
 >> 
